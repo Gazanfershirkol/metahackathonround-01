@@ -1,7 +1,7 @@
 env_name: support_ticket_triage
 version: 0.1.0
 description: "Simulates an autonomous Support Ticket Triage system, where agents must categorize, prioritize, and decide actions for incoming support requests. A real-world business process task."
-python_startup_command: "uvicorn server:app --host 0.0.0.0 --port 7860"
+python_startup_command: "uvicorn server.app:app --host 0.0.0.0 --port 7860"
 tasks:
   - easy
   - medium
