@@ -11,14 +11,8 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          lfs: true
-      
+          
       - name: Push to hub
-        uses: huggingface/hub-action@v1
-        with:
-          target_repo_id: Gazanfer21/Support-Ticket-Triage
-          token: ${{ secrets.HF_TOKEN }}
-          type: space
-          commit_message: "Sync from GitHub"
-          commit_description: "Automated sync from metahackathonround-01"
-          git push --force https://Gazanfer21:$HF_TOKEN@huggingface.co/spaces/Gazanfer21/Support-Ticket-Triage main
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: git push --force https://Gazanfer21:$HF_TOKEN@huggingface.co/spaces/Gazanfer21/Support-Ticket-Triage main
