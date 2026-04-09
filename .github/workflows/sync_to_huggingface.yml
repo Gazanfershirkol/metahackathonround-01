@@ -15,4 +15,4 @@ jobs:
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push --force https://Gazanfer21:$HF_TOKEN@huggingface.co/spaces/Gazanfer21/Support-Ticket-Triage main
+        run: git push --force https://Gazanfer21:$HF_TOKEN@huggingface.co/spaces/Gazanfer21/Support-Ticket-Triage main 
